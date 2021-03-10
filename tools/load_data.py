@@ -1,10 +1,11 @@
+import json
 import os
-import sys
+
 import pandas as pd
 from pymongo import MongoClient
-import json
 
 
+@mongo
 def import_csv(filepath):
     mng_client = MongoClient('localhost', 27017)
     mng_db = mng_client['covid_data']
